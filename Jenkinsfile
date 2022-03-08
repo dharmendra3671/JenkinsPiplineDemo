@@ -10,7 +10,7 @@ pipeline {
                      def USER_INPUT = input(
                         message: 'Enter number to find list of positive and negative number.',
                         parameters: [
-                                [$class: 'GlobalVariableStringParameterDefinition',
+                                [$class: 'ChoiceParameterDefinition',
                                  name: 'input',
                                  description: 'taking user inputs']
                         ])
