@@ -1,5 +1,5 @@
 import sys
-from duplicate_data import *
+from posnegint import *
 limit=int(input("Enter limit "))
 num=[]
 pos_num = []
