@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Python') {
             steps {
-                sh 'demo.py'
+                bat 'posnegint.py'
             }
         }
         stage('Build') {
@@ -15,16 +15,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing'
-            }
-        }
-        stage('Release') {
-            steps {
-                echo 'Releasing'
             }
         }
     }
