@@ -1,3 +1,3 @@
-@Library(myPiprline)_
+@Library("myPipeline") _
 myPipeline.call(branch: 'main', scmUrl: 'https://github.com/dharmendra3671/Pipeline_jenkins.git',
                    email: 'kumar.dk3671@gmail.com', serverPort: '8080')
