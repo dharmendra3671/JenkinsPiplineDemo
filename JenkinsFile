@@ -1,2 +1,2 @@
-myDeliveryPipeline(branch: 'main', scmUrl: 'https://github.com/dharmendra3671/JenkinsPiplineDemo.git',
+myDeliveryPipeline(branch: 'main', scmUrl: 'https://github.com/dharmendra3671/Pipeline_jenkins.git',
                    email: 'kumar.dk3671@gmail.com', serverPort: '8080')
