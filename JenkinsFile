@@ -1,4 +1,27 @@
-@Library('myPipeline') _
+@Library('myPipeline') _ 
 
-myPipeline(branch: 'main', scmUrl: 'https://github.com/dharmendra3671/Pipeline_jenkins.git',
-                   email: 'kumar.dk3671@gmail.com', serverPort: '8080')
+pipeline {
+    agent any
+    stages {
+        stage('build') {
+            steps {
+                bat 'Pythonzip.py'
+            }
+        }
+        stage ('test') {
+            steps {
+                echo 'testing'
+            }
+        }
+        stage('deploy'){
+            steps {
+                bat 'sharelibjf-zip.py'
+            }
+        }
+    }
+    post {
+    always {
+      sendNotifications currentBuild.result
+    }
+  }
+}
