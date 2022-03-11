@@ -1,4 +1,4 @@
-@Library('mypipeline_notification') _ 
+@Library('mypipeline_notification') _
 
 pipeline {
     agent any
@@ -20,8 +20,8 @@ pipeline {
         }
     }
     post {
-    always {
-      sendNotification currentBuild.result
+        always {
+        sendNotification currentBuild.result
+        }
     }
-  }
 }
