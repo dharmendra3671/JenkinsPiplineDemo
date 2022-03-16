@@ -5,7 +5,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bat 'Pythonzip.py'
+                script{
+                    get_resource_dir.runMyPython()
+                }
             }
         }
         stage ('test') {
@@ -15,13 +17,15 @@ pipeline {
         }
         stage('deploy'){
             steps {
-                bat 'sharelibjf-zip.py'
+                script{
+                    get_resource_dir.runpythonScripts()
+                }
             }
         }
     }
     post {
         always {
-        sendNotification currentBuild.result
+            sendNotification currentBuild.result
         }
     }
 }
