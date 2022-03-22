@@ -18,7 +18,7 @@ pipeline {
         stage('deploy'){
             steps {
                 script{
-                    getResource_dir.runpythonScripts()
+                    getResource_dir.runMyPython()
                 }
             }
         }
